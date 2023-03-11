@@ -7,6 +7,7 @@ const exphbs = require('express-handlebars');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var newRouter = require('./routes/new');
 
 
 const app = express();
@@ -28,7 +29,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/new', usersRouter);
+app.use('/new', newRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
