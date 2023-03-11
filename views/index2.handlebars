@@ -1,2 +1,9 @@
 {{!-- Our first template with tokens --}}
-<h1>Hello, {{town}} </h1>
+<h1>{{title}} </h1>
+<div>
+    {{#each messages}}
+        <p>{{text}}</p>
+        <p>{{user}}</p>
+        <p>{{added}}</p>
+    {{/each}}
+</div>
